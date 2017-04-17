@@ -1,0 +1,51 @@
+//
+//  VegetableLeague.pch
+//  VegetableLeague
+//
+//  Created by XINTIANKEJI on 16/7/14.
+//  Copyright © 2016年 cdjxb. All rights reserved.
+//
+
+#ifndef VegetableLeague_pch
+#define VegetableLeague_pch
+
+#import "ViewController.h"
+
+#endif /* VegetableLeague_pch */
+
+/*!
+ 简单阐述
+    Main  --   主要框架
+    MainCode  --  框架以内的
+        Code(主要) -- 首页，美食，订单，我的，主要试图
+        BaseData(基类)  --  创建基础的类，包括Model，ModelVC等
+        Lib(三方库)  --   可以不用cocoapods管理的
+        Tool(工具类)  --  需要使用到的宏定义，封装的方法，等，包名自建，比如(Other(其他))
+        Resources(资源) --  图片，plist等
+        Other   --  放不知道放哪儿的
+    Supporting Files --  系统自带
+ */
+
+
+
+
+
+//此项目框架只是参考，可根据实际情况做调整
+
+
+//   导入的base，颜色，API等全部分开，以英文命名，每个项目开头也要说明项目的页面框架(比如首页框架,商城详情等)
+
+//   自定义按钮，控件，用一个文件夹分好类，以便后期2开
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+
+#import "Other.h"
+
+
+// 打印
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d  \t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
